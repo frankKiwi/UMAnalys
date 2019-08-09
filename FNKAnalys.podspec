@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "FNKAnalys"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.5"
   spec.summary      = "A short description of FNKAnalys."
 
  
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/frankKiwi/UMAnalys.git", :tag => "#{spec.version}" }
  
-  #spec.source_files  = "UMSocial/**/*.{h,m}"
+  spec.source_files  = "UMSocial/**/*.{h,m}"
   spec.vendored_frameworks = "UMSocial/**/*.framework"
   spec.public_header_files = "UMSocial/**/*.framework/**/Headers/**/*.h"
 
