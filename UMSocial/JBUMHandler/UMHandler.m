@@ -31,15 +31,6 @@
     count++;
     [MobClick event:@"ManTab" attributes:@{@"tap" : @"视频主页按钮点击次数"} counter:(int)count];
 }
-+(void)eventVideoGameDownLoadTaps:(NSInteger)gameId andGameName:(NSString*)gameName{
-    static NSInteger count = 0;
-    count++;
-    [MobClick event:@"eventVideoGameDownLoadTaps" attributes:@{@"tap" : @"视频页面下载按钮点击次数",@"gameName":gameName,@"gameId":[NSString stringWithFormat:@"%ld",(long)gameId]} counter:(int)count];
-}
-+(void)eventVideoGameInstalls:(NSInteger)gameId andGameName:(NSString*)gameName{
-    static NSInteger count = 0;
-    count++;
-    [MobClick event:@"eventVideoGameInstalls" attributes:@{@"tap" : @"视频页面下载安装次数",@"gameName":gameName,@"gameId":[NSString stringWithFormat:@"%ld",(long)gameId]} counter:(int)count];
-}
+
 
 @end

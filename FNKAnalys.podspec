@@ -91,10 +91,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
  
-  spec.source_files  = "UMSocial/**/*.{h,m},"
-  spec.vendored_frameworks = 'UMSocial/UMAnalytics.framework','UMSocial/UMCommon.framework','UMSocial/SecurityEnvSDK.framework','UMSocial/UTDID.framework','UMSocial/UMCommonLog.framework'
-  spec.public_header_files = 'UMSocial/UMAnalytics.framework/Headers/**/.*h','UMSocial/SecurityEnvSDK.framework/Headers/**/.*h','UMSocial/UTDID.framework/Headers/**/.*h','UMSocial/UMCommonLog.framework/Headers/**/.*h','UMSocial/UMCommonLog.framework/Headers/**/.*h'
-
+  spec.source_files  = "UMSocial/**/*.{h,m}"
+  spec.vendored_frameworks = "UMSocial/**/*.framework"
+  spec.public_header_files = "UMSocial/**/*.framework/**/Headers/**/*.h"
 
   #spec.exclude_files = "Classes/Exclude"
 
@@ -110,29 +109,12 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-   spec.resources = "UMSocial/*.{boundle}"
+   spec.resources = "UMSocial/**/UMCommonLog.bundle"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
+  spec.frameworks = "UIKit", "Foundation"
 
   spec.requires_arc = true
 
