@@ -20,12 +20,12 @@
     return _sharedInstance;
 }
 
-+ (void)PageAnalaysBegain:(UIViewController*)vc{
-    [MobClick beginLogPageView:vc.className];
-}
-+ (void)PageAnalaysEnd:(UIViewController*)vc{
-    [MobClick endLogPageView:vc.className];
-}
+//+ (void)PageAnalaysBegain:(UIViewController*)vc{
+//    [MobClick beginLogPageView:vc.className];
+//}
+//+ (void)PageAnalaysEnd:(UIViewController*)vc{
+//    [MobClick endLogPageView:vc.className];
+//}
 +(void)eventVideoTabAnalys{
     static NSInteger count = 0;
     count++;

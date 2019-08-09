@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UMHandler : NSObject
 +(UMHandler *)sharedInstance;
-/***  开始统计页面 */
-+ (void)PageAnalaysBegain:(UIViewController*)vc;
-/***  结束统计页面 */
-+ (void)PageAnalaysEnd:(UIViewController*)vc;
+///***  开始统计页面 */
+//+ (void)PageAnalaysBegain:(UIViewController*)vc;
+///***  结束统计页面 */
+//+ (void)PageAnalaysEnd:(UIViewController*)vc;
 
 @end
 
