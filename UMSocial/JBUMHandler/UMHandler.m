@@ -26,6 +26,7 @@
 //+ (void)PageAnalaysEnd:(UIViewController*)vc{
 //    [MobClick endLogPageView:vc.className];
 //}
+
 +(void)eventVideoTabAnalys{
     static NSInteger count = 0;
     count++;
