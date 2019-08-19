@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "FNKAnalys"
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
   spec.summary      = "A short description of FNKAnalys."
 
  
@@ -32,14 +32,14 @@ Pod::Spec.new do |spec|
 
 
 
-  spec.dependency 
-
-
   spec.frameworks = "UIKit", "Foundation"
 
   spec.requires_arc = true
-  
-  spec.dependency = 'UMCCommon', 'UMCAnalytics'
+ 
+  spec.dependency  'UMCCommon'
+  spec.dependency 'UMCAnalytics'
+
+ 
 
 
 end
