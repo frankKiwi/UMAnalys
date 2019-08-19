@@ -8,6 +8,8 @@
 
 #import "UMHandler.h"
 #import <UMAnalytics/MobClick.h>
+static NSString *umKey = @"5d4bd4ec570df311b000067b";
+static NSString*umChannel = @"adhoc";
 
 @implementation UMHandler
 +(UMHandler *)sharedInstance
@@ -19,18 +21,15 @@
     });
     return _sharedInstance;
 }
++ (void)initUM{
+    [UMConfigure initWithAppkey:umKey channel:umChannel];
+}
 
-//+ (void)PageAnalaysBegain:(UIViewController*)vc{
-//    [MobClick beginLogPageView:vc.className];
-//}
-//+ (void)PageAnalaysEnd:(UIViewController*)vc{
-//    [MobClick endLogPageView:vc.className];
-//}
-//+(void)eventVideoTabAnalys{
-//    static NSInteger count = 0;
-//    count++;
-//    [MobClick event:@"ManTab" attributes:@{@"tap" : @"视频主页按钮点击次数"} counter:(int)count];
-//}
++(void)eventVideoTabAnalys{
+    static NSInteger count = 0;
+    count++;
+    [MobClick event:@"ManTab" attributes:@{@"tap" : @"视频主页按钮点击次数"} counter:(int)count];
+}
 
 
 @end
